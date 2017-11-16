@@ -4,7 +4,7 @@ Cro Fi - HTML MultiPurpose Free Business Template
 
     created: 10/20/2017
     latest update: 10/20/2017
-    Developed By Numan
+    Developed By Numan Hussain
 
 
 
