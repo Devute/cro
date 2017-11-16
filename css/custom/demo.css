@@ -1,0 +1,244 @@
+#loader-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2000;
+}
+
+#loader {
+	display: block;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	height: 150px;
+	width: 150px;
+	margin: -75px 0 0 -75px;
+	border: 3px solid transparent;
+	border-radius: 50%;
+	border-top-color: #fff;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+	z-index: 2001;
+}
+
+#loader:before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	bottom: 5px;
+	left: 5px;
+	border: 3px solid transparent;
+	border-radius: 50%;
+	border-top-color: #fff;
+	-webkit-animation: spin 3s linear infinite;
+	animation: spin 3s linear infinite;
+}
+
+#loader:after {
+	content: "";
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	bottom: 15px;
+	left: 15px;
+	border: 3px solid transparent;
+	border-radius: 50%;
+	border-top-color: #fff;
+	-webkit-animation: spin 1.5s linear infinite;
+	animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+#loader-wrapper .loader-section {
+	position: fixed;
+	top: 0;
+	width: 51%;
+	height: 100%;
+	background: #3b9ad1;
+	z-index: 2000;
+}
+
+#loader-wrapper .loader-section.section-left {
+	left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+	right: 0;
+}
+
+.loaded #loader-wrapper .loader-section.section-left {
+	-webkit-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	transform: translateX(-100%);
+	-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+	-webkit-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader {
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+.loaded #loader-wrapper {
+	visibility: hidden;
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+	-webkit-transition: all 0.3s 1s ease-out;
+	transition: all 0.3s 1s ease-out;
+}
+
+.style-switch {
+	opacity: 0.95;
+	position: fixed;
+	z-index: 9999;
+	top: 105px;
+	left: -220px;
+	background: #fff;
+}
+
+.style-switch:hover {
+	opacity: 1 !important;
+}
+
+.style-switch .switched-options {
+	position: relative;
+	width: 220px;
+	text-align: left;
+	padding: 20px;
+	-webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+.style-switch .config-title {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 16px;
+	color: #000;
+	border-bottom: 1px dotted #CCCCCC;
+	border-top: 1px dotted #CCCCCC;
+	margin-bottom: 5px;
+}
+
+.style-switch ul {
+	margin-bottom: 25px;
+}
+
+.style-switch ul .active a {
+	color: #005885;
+	font-weight: 700;
+}
+
+.style-switch ul .p {
+	font-weight: 400;
+	font-size: 12px;
+	color: #CCC;
+	margin-top: 10px;
+}
+
+.style-switch ul li a {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #808080;
+}
+
+.style-switch ul li a:hover {
+	color: #008ed6;
+}
+
+.style-switch ul.styles {
+	margin-top: 15px;
+}
+
+.style-switch ul.styles li {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.style-switch ul.styles li .shakespeare,
+.style-switch ul.styles li .eastern-blue,
+.style-switch ul.styles li .jade,
+.style-switch ul.styles li .amber,
+.style-switch ul.styles li .seance,
+.style-switch ul.styles li .cinnabar,
+.style-switch ul.styles li .yellow-orange,
+.style-switch ul.styles li .sushi {
+	width: 35px;
+	height: 35px;
+}
+
+.style-switch ul.styles li .shakespeare {
+	background: #3b9ad1;
+}
+
+.style-switch ul.styles li .eastern-blue {
+	background: #1b99b9;
+}
+
+.style-switch ul.styles li .jade {
+	background: #00ab66;
+}
+
+.style-switch ul.styles li .amber {
+	background: #fbc105;
+}
+
+.style-switch ul.styles li .seance {
+	background: #9d1db2;
+}
+
+.style-switch ul.styles li .cinnabar {
+	background: #e8434a;
+}
+
+.style-switch ul.styles li .yellow-orange {
+	background: #ffae42;
+}
+
+.style-switch ul.styles li .sushi {
+	background: #86c23c;
+}
+
+.style-switch .switch-button {
+	opacity: 1 !important;
+	background: #FFF;
+	padding: 10px;
+	font-size: 24px;
+	color: #272727;
+	position: absolute;
+	overflow: hidden;
+	right: -54px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.style-switch .switch-button:hover {
+	color: #008ed6;
+	cursor: pointer;
+	text-decoration: none;
+}
