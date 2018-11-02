@@ -16,4 +16,4 @@ Cro Fi - HTML MultiPurpose Free Business Template
 
 
 
-Thank you for purchasing our theme.If you have any questions that are beyond the scope of this help file, please feel free to contact me
+Thank you for using our theme.If you have any questions that are beyond the scope of this help file, please feel free to contact me
